@@ -152,7 +152,7 @@ a {
 }    
 
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
     .header {
         background-image: url(../images/desktop/image-header.jpg);
     }
@@ -210,7 +210,7 @@ a {
 }
 
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
     .hero {
         min-height: 85vh;
 
@@ -225,7 +225,7 @@ a {
     align-items: center;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
     .card {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -236,7 +236,7 @@ a {
     flex-direction: column;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
     .card-reverse {
     flex-direction: row-reverse;
 }
@@ -248,14 +248,22 @@ a {
     align-items: center;
     justify-content: center;
     padding: 10rem 5rem;
+}
 
+@media (min-width: 768px) {
+    .content {
+        padding: 0;
+    }
 }
 
 .content h2 {
     text-align: center;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
+    .content h2 {
+        text-align: start;
+    }
     .content {
     align-items: flex-start;
     gap: 3.5rem;
@@ -268,7 +276,7 @@ a {
     text-align: center;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
     .p-content {
         text-align: start;
     }
@@ -278,7 +286,7 @@ a {
     width: 100%;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
     .image-card {
         width: 100%;
     }
@@ -294,7 +302,7 @@ a {
     gap: 0;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
     .boxes {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -362,7 +370,7 @@ a {
     align-items: center;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
     .testimonials {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -423,7 +431,7 @@ a {
 }
 
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
     .gallery {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -503,28 +511,77 @@ a {
 
 /* MOBILE RESPONSIVE DESIGN */
 
-@media (min-width: 375px) {
+.navigation {
+    display: none;
+}
+.visible {
+    display: block;
+}
+
+
+@media (min-width: 768px) {
     .navigation {
-        display: none;
+        display: flex;
     }
-    .menu-hamburger {
-        display: block;
+    .visible {
+        display: none;
     }
 }
 
-@media (min-width: 1440px) {
-    .navigation {
-        display: block;
-    }
-    .menu-hamburger {
-        display: none;
-    }
+.hamburger-icon {
+    cursor: pointer;
 }
+
+
+.mobile-container {
+    position: absolute;
+    top: 5rem; /* o el alto de tu header */
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    z-index: 10;
+    clip-path: polygon(90% 0%, 100% 10%, 100% 0%, 100% 100%, 0 100%, 0 0); /* flechita decorativa */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 3rem;
+}
+
+
+/* Enlaces del menú */
+
 
 .btn-contact-mobile {
     background-color: var(--yellow);
-    padding: 1rem;
+    padding: 2rem 3rem;
     border-radius: 5rem;
+    font-size: 1.6rem;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    padding: 2rem;
+}
+
+
+.link-mobile {
+    text-decoration: none;
+    color: hsl(232, 10%, 55%);
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.nav-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
 }
 
 
